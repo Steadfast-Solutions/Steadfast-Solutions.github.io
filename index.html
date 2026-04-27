@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steadfast Solutions | Professional Software & Firmware Engineering</title>
+    <title>Steadfast Solutions | Efficient Digital Tools</title>
     <style>
         :root {
             --bg-dark: #0a192f;
@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-light);
@@ -72,7 +72,7 @@
         }
 
         .logo-img {
-            width: 150px;
+            width: 140px;
             height: auto;
             border-radius: 50%;
             border: 4px solid var(--accent-teal);
@@ -82,7 +82,7 @@
         .hero h1 { margin: 0; font-size: 2.5rem; }
         .hero p { color: var(--accent-teal); font-size: 1.2rem; max-width: 600px; margin: 1rem auto; }
 
-        /* Main Content Container */
+        /* Content Container */
         .container {
             max-width: 1000px;
             margin: -40px auto 4rem;
@@ -97,13 +97,19 @@
             margin-bottom: 2rem;
         }
 
+        /* App Banner - Scaled and Centered */
         .app-banner {
             width: 100%;
+            max-width: 600px;
+            height: auto;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin: 0 auto 1.5rem;
+            display: block;
         }
 
         h2 { color: var(--bg-dark); border-left: 5px solid var(--accent-teal); padding-left: 15px; }
+
+        .btn-container { text-align: center; margin-top: 1.5rem; }
 
         .btn {
             display: inline-block;
@@ -126,32 +132,34 @@
         }
 
         @media (max-width: 600px) {
-            nav { flex-direction: column; }
-            nav ul { margin-top: 1rem; }
-            nav ul li { margin: 0 10px; }
+            nav { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 1rem; flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 5px 10px; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="nav-logo">STEADFAST</a>
+        <a href="index.html" class="nav-logo">STEADFAST SOLUTIONS</a>
         <ul>
             <li><a href="apps.html">Apps</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="tos.html">ToS</a></li>
             <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="contact.html">Disclaimer</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <img src="logo.png" alt="Steadfast Solutions Logo" class="logo-img">
         <h1>Steadfast Solutions</h1>
-        <p>Precision Engineering. Streamlined Workflows. Professional Results.</p>
+        <p>Building efficient, streamlined tools for modern workflows.</p>
     </header>
 
     <div class="container">
+        
         <section class="card">
             <h2>About Steadfast Solutions</h2>
             <p>Steadfast Solutions focuses on building efficient, streamlined tools for modern workflows. We identify specific needs in the digital landscape and develop software designed for technical precision and daily utility. The goal is simple: create high-performance applications that solve real-world problems with clean, effective code.</p>
@@ -161,8 +169,11 @@
             <h2>Featured: InstaInvoice</h2>
             <img src="InstaInvoiceBig.webp" alt="InstaInvoice Banner" class="app-banner">
             <p>Generate professional, branded invoices in seconds. InstaInvoice is built for speed and reliability, ensuring your billing process never slows down your business.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.steadfastsolutions.instainvoice&hl=en_CA" class="btn">View on Google Play</a>
+            <div class="btn-container">
+                <a href="https://play.google.com/store/apps/details?id=com.steadfastsolutions.instainvoice&hl=en_CA" class="btn">View on Google Play</a>
+            </div>
         </section>
+
     </div>
 
     <footer>

@@ -1,0 +1,70 @@
+:root {
+    --bg-dark: #0a192f;
+    --bg-light: #f4f7f6;
+    --accent-teal: #00c2cb;
+    --text-main: #333;
+    --text-white: #ffffff;
+    --nav-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--bg-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: var(--nav-shadow);
+}
+
+.nav-logo {
+    color: var(--accent-teal);
+    font-weight: 800; font-size: 1.4rem;
+    text-decoration: none; letter-spacing: 1px;
+}
+
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: var(--text-white); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+nav ul li a:hover { color: var(--accent-teal); }
+
+/* Layout Elements */
+.hero { background-color: var(--bg-dark); color: var(--text-white); padding: 4rem 2rem 6rem; text-align: center; }
+.logo-img { width: 140px; height: auto; border-radius: 50%; border: 4px solid var(--accent-teal); margin-bottom: 1.5rem; }
+.hero h1 { margin: 0; font-size: 2.5rem; }
+.hero p { color: var(--accent-teal); font-size: 1.2rem; max-width: 600px; margin: 1rem auto; }
+
+.container { max-width: 1000px; margin: -40px auto 4rem; padding: 0 1rem; }
+.card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 2rem; }
+
+/* App Specific Styling */
+.app-banner { width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block; }
+h2 { color: var(--bg-dark); border-left: 5px solid var(--accent-teal); padding-left: 15px; }
+
+.btn-container { text-align: center; margin-top: 1.5rem; }
+.btn { display: inline-block; background: var(--accent-teal); color: var(--bg-dark); padding: 12px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,194,203,0.3); }
+
+/* App Grid for apps.html */
+.app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.app-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: 0.3s; }
+.app-card:hover { transform: translateY(-5px); }
+.app-card img { width: 100%; height: auto; display: block; }
+.app-card-content { padding: 1.5rem; flex-grow: 1; }
+
+footer { text-align: center; padding: 3rem; color: #777; font-size: 0.85rem; }
+
+@media (max-width: 600px) {
+    nav { flex-direction: column; }
+    nav ul { margin-top: 1rem; flex-wrap: wrap; justify-content: center; }
+    nav ul li { margin: 5px 10px; }
+}

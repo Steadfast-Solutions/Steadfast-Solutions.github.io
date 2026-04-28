@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Steadfast Solutions</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+    <nav>
+        <a href="{{ '/' | relative_url }}" class="nav-logo">STEADFAST</a>
+        <ul>
+            <li><a href="{{ '/apps.html' | relative_url }}">Apps</a></li>
+            <li><a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a></li>
+            <li><a href="{{ '/tos.html' | relative_url }}">ToS</a></li>
+            <li><a href="{{ '/disclaimer.html' | relative_url }}">Disclaimer</a></li>
+            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    {{ content }}
+
+    <footer>
+        <p>&copy; {{ "now" | date: "%Y" }} Steadfast Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

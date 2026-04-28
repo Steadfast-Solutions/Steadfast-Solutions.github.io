@@ -7,22 +7,28 @@ title: Contact Us
 </div>
 
 <div class="container">
-    <form action="https://formspree.io/f/steadfastsolutionssupport@gmail.com" method="POST">
-        <div style="margin-bottom: 1.5rem;">
-            <label style="display:block; font-weight:600;">Name</label>
-            <input type="text" name="name" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:6px;" placeholder="Your Name" required>
-        </div>
+    <section class="card">
+        <form action="https://formspree.io/f/{{ site.email }}" method="POST">
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display:block; font-weight:600;">Name</label>
+                <input type="text" name="name" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:6px;" placeholder="Your Name" required>
+            </div>
 
-        <div style="margin-bottom: 1.5rem;">
-            <label style="display:block; font-weight:600;">Email Address</label>
-            <input type="email" name="_replyto" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:6px;" placeholder="email@example.com" required>
-        </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display:block; font-weight:600;">Email Address</label>
+                <input type="email" name="_replyto" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:6px;" placeholder="email@example.com" required>
+            </div>
 
-        <div style="margin-bottom: 1.5rem;">
-            <label style="display:block; font-weight:600;">Message</label>
-            <textarea name="message" style="width:100%; height:150px; padding:12px; border:1px solid #ddd; border-radius:6px; resize:vertical;" placeholder="How can we help?" required></textarea>
-        </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display:block; font-weight:600;">Message</label>
+                <textarea name="message" style="width:100%; height:150px; padding:12px; border:1px solid #ddd; border-radius:6px; resize:vertical;" placeholder="How can we help?" required></textarea>
+            </div>
 
-        <button type="submit" class="btn" style="width:100%;">Send Message</button>
-    </form>
+            <button type="submit" class="btn" style="width:100%;">Send Message</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; color: #666;">
+            <p>Direct inquiries: <strong>{{ site.email }}</strong></p>
+        </div>
+    </section>
 </div>
